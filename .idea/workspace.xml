@@ -5,62 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610b85c1-00fa-4748-ad5a-e3ec22084f86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/aaa.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/alphabet.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/random.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/bib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/book1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/book2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/geo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/news" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/obj1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/obj2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/pic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/trans" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/alice29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/asyoulik.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/cp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/fields.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/grammar.lsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/kennedy.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/lcet10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/plrabn12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/ptt5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/xargs.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/E.coli" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/bible.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/world192.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/misc/SHA1SUM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/misc/pi.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/CountMinSketch.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/UseCountMinSketch.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/UseCountMinSketch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/UseCountMinSketch.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
