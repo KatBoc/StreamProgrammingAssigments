@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="610b85c1-00fa-4748-ad5a-e3ec22084f86" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/aaa.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/alphabet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/artificial/random.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/book1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/book2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/geo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/news" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/obj1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/obj2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/paper6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/pic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/progp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/calgary/trans" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/alice29.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/asyoulik.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/cp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/fields.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/grammar.lsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/kennedy.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/lcet10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/plrabn12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/ptt5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/canterbury/xargs.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/E.coli" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/bible.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/large/world192.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/misc/SHA1SUM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canterbury-corpus-master/misc/pi.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/CountMinSketch.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/UseCountMinSketch.scala" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2PbfxFPW7lNgaAD0bCTlr3jgjKG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "project.propCompiler"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.UseCountMinSketch">
+    <configuration name="CountMinSketch" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="CountMinSketch" />
+      <module name="Stream_programming_assigments" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UseCountMinSketch" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="UseCountMinSketch" />
+      <module name="Stream_programming_assigments" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UseCountMinSketch" />
+        <item itemvalue="Application.CountMinSketch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="610b85c1-00fa-4748-ad5a-e3ec22084f86" name="Changes" comment="" />
+      <created>1683730948855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683730948855</updated>
+    </task>
+    <servers />
+  </component>
+</project>
