@@ -1,6 +1,3 @@
-import jdk.internal.org.jline.reader.Candidate
-
-import java.awt.Canvas
 
 object MajorityAlgorithm {
 
@@ -22,7 +19,7 @@ object MajorityAlgorithm {
     candidate.get
   }
 
-  private def validateMajorityAlgorithm(stream: Seq[String], finalCandidate: String): Boolean = {
+  private def correctnessMajorityAlgorithm(stream: Seq[String], finalCandidate: String): Boolean = {
     println("Validate Majority Algorithm")
     var counter = 0
     for (element <- stream) {
@@ -38,13 +35,15 @@ object MajorityAlgorithm {
 
     def main(args: Array[String]): Unit ={
       val stream = Seq("a", "a", "a", "c", "c", "b", "b", "c", "c", "c", "b", "c", "c", "d", "c", "d", "c")
-      val finalEl = majorityAlgorithm(stream)
+      val stream_2 = Seq("a", "b", "a", "b", "c")
+      val finalEl = majorityAlgorithm(stream_2)
       println(" ")
-      if(validateMajorityAlgorithm(stream, finalEl))
-        {
-          println("\nValidation: True")
-          println(s"Final candidate: $finalEl")
-        }
+      if(correctnessMajorityAlgorithm(stream_2, finalEl)) {
+        println("\nValidation: True")
+        println(s"Final candidate: $finalEl")
+      } else {
+        println("Validation: False")
+      }
     }
 }
 
@@ -88,6 +87,7 @@ Current element: d, Candidate: c, n': 0
 Current element: c, Candidate: c, n': 1
 Current element: d, Candidate: c, n': 0
 Current element: c, Candidate: c, n': 1
+// n' > 0 means that there were more additions than subtractions, i.e. the found element occurred more than m/2
 
 Validation: True
 Final candidate: c
