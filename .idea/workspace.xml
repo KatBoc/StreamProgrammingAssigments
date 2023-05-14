@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610b85c1-00fa-4748-ad5a-e3ec22084f86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/AlonMatiasSzegedy.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/MisraGries.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Usage.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/WorkingWithWords.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/MajorityAlgorithm.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/MajorityAlgorithm.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/UseCountMinSketch.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -115,5 +112,15 @@
       <updated>1683730948855</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
