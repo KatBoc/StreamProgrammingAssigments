@@ -11,7 +11,8 @@ object Usage {
     fileSource.close()
     words
   }
-  private def runCountMinSketch(text: Seq[String]) = {
+
+  private def runCountMinSketch(text: Seq[String]): Unit = {
     val w = 1 << 16
     val d = 4
     val textSketch = CountMinSketch(w, d)
@@ -51,9 +52,11 @@ object Usage {
 
     // Alice's Adventures in Wonderland - wrongly estimated frequencies: 0
     // The Bible - wrongly estimated frequencies: 13
+
   }
 
   private def runMisraGries(words: Seq[String], k: Int): Unit = {
+
     val mg = new MisraGries(k)
     words.foreach(mg.add)
 
@@ -69,39 +72,64 @@ object Usage {
       val withinBounds = (lowerBound <= mgFreq) && (mgFreq <= exactFreq)
       println(f"$word%11s | $exactFreq%15d | $lowerBound%11d | $mgFreq%12d | $freqGreater%19s | $exactGreater%22s | $withinBounds%13s")
     }
+
     // I add additional column with  exact freq > threshold because for me it have more sens.
     // Misra-Gries algorithm work better for worlds that occurs in text more time in threshold, what we can see below.
     // But comparing it with MG freq, like in the task, always gives false, because MG cuts the result by thresholds and in this way, we have all false.
-/*
-Threshold: 1301
-       word | exact frequency | lower bound | MG frequency | MG freq > threshold | exact freq > threshold | within bounds
-        the |            1642 |         341 |          384 |               false |                   true |          true
-        and |             872 |        -429 |            6 |               false |                  false |          true
-         of |             513 |        -788 |            4 |               false |                  false |          true
-        all |             182 |       -1119 |            1 |               false |                  false |          true
-         in |             369 |        -932 |            1 |               false |                  false |          true
-   pleasure |               2 |       -1299 |            1 |               false |                  false |          true
-remembering |               1 |       -1300 |            1 |               false |                  false |          true
-        own |              10 |       -1291 |            1 |               false |                  false |          true
-      happy |               1 |       -1300 |            1 |               false |                  false |          true
-      their |              52 |       -1249 |            1 |               false |                  false |          true
-     simple |               5 |       -1296 |            1 |               false |                  false |          true
-     summer |               2 |       -1299 |            1 |               false |                  false |          true
-       joys |               1 |       -1300 |            1 |               false |                  false |          true
-       life |              12 |       -1289 |            1 |               false |                  false |          true
-       with |             180 |       -1121 |            1 |               false |                  false |          true
-        her |             247 |       -1054 |            1 |               false |                  false |          true
-      would |              83 |       -1218 |            1 |               false |                  false |          true
-       days |               4 |       -1297 |            1 |               false |                  false |          true
-        end |              18 |       -1283 |            1 |               false |                  false |          true
-      child |              11 |       -1290 |            1 |               false |                  false |          true
-    */
+    /*
+
+    Threshold: 1301
+           word | exact frequency | lower bound | MG frequency | MG freq > threshold | exact freq > threshold | within bounds
+            the |            1642 |         341 |          384 |               false |                   true |          true
+            and |             872 |        -429 |            6 |               false |                  false |          true
+             of |             513 |        -788 |            4 |               false |                  false |          true
+            all |             182 |       -1119 |            1 |               false |                  false |          true
+             in |             369 |        -932 |            1 |               false |                  false |          true
+       pleasure |               2 |       -1299 |            1 |               false |                  false |          true
+    remembering |               1 |       -1300 |            1 |               false |                  false |          true
+            own |              10 |       -1291 |            1 |               false |                  false |          true
+          happy |               1 |       -1300 |            1 |               false |                  false |          true
+          their |              52 |       -1249 |            1 |               false |                  false |          true
+         simple |               5 |       -1296 |            1 |               false |                  false |          true
+         summer |               2 |       -1299 |            1 |               false |                  false |          true
+           joys |               1 |       -1300 |            1 |               false |                  false |          true
+           life |              12 |       -1289 |            1 |               false |                  false |          true
+           with |             180 |       -1121 |            1 |               false |                  false |          true
+            her |             247 |       -1054 |            1 |               false |                  false |          true
+          would |              83 |       -1218 |            1 |               false |                  false |          true
+           days |               4 |       -1297 |            1 |               false |                  false |          true
+            end |              18 |       -1283 |            1 |               false |                  false |          true
+          child |              11 |       -1290 |            1 |               false |                  false |          true
+        */
   }
+
+  private def runAlonMatiasSzegedySimplified(words: Seq[String], r: Int = 60): Unit = {
+
+      val ams = new AlonMatiasSzegedySimplified(words.length, r)
+      words.foreach(ams.add)
+
+      val secondMomentEstimate = ams.estimateSecondMoment
+      val thirdMomentEstimate = ams.estimateThirdMoment
+
+      val wordCounts = words.groupBy(identity).mapValues(_.length)
+      val sortedWords = wordCounts.toSeq.sortBy(-_._2)
+
+      val secondMomentExact = sortedWords.map(i => math.pow(i._2, 2)).sum
+      val thirdMomentExact = sortedWords.map(i => math.pow(i._2, 3)).sum
+
+      println(s"Second moment estimate: $secondMomentEstimate, exact: $secondMomentExact")
+      println(s"Third moment estimate: $thirdMomentEstimate, exact: $thirdMomentExact")
+
+    // Second moment estimate: 67421.4, exact: 7648301.0
+    // Third moment estimate: 2.58112971652E10, exact: 6.914019603E9
+
+    }
 
   def main(args: Array[String]): Unit = {
     val filePath = "C:/Users/KatarzynaBocian(2399/Desktop/BDA/Stream programming/A/Stream_programming_assigments/src/canterbury-corpus-master/canterbury/alice29.txt"
     val words = txtFileToSeq(filePath)
-    runMisraGries(words, 21)
-    runCountMinSketch(words)
+    // runMisraGries(words, 21)
+    // runCountMinSketch(words)
+    runAlonMatiasSzegedySimplified(words, 60)
   }
 }
