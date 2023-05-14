@@ -38,14 +38,14 @@ object Usage {
      */
 
     /*
-        For Bible:
+    For Bible:
 
-        Word: in             Estimated: 12211     Exact: 12211
-        Word: the            Estimated: 61680     Exact: 61680
-        Word: beginning      Estimated: 105       Exact: 105
-        Word: god            Estimated: 4388      Exact: 4388
-        Word: created        Estimated: 45        Exact: 45
-         */
+    Word: in             Estimated: 12211     Exact: 12211
+    Word: the            Estimated: 61680     Exact: 61680
+    Word: beginning      Estimated: 105       Exact: 105
+    Word: god            Estimated: 4388      Exact: 4388
+    Word: created        Estimated: 45        Exact: 45
+    */
 
     val textErrors = words.count(word => textSketch.estimate(word) != text.count(_ == word))
 
@@ -158,25 +158,21 @@ object Usage {
   }
 
   private def runAlonMatiasSzegedySimplified(words: Seq[String], r: Int): Unit = {
-
     val ams = new AlonMatiasSzegedySimplified(words.length, r)
     words.foreach(ams.add)
-
-    val secondMomentEstimate = ams.estimateSecondMoment
-    val thirdMomentEstimate = ams.estimateThirdMoment
+    val secondMomentEstimate = ams.estimateMoment(2)
+    val thirdMomentEstimate = ams.estimateMoment(3)
 
     val wordCounts = words.groupBy(identity).mapValues(_.length)
-    val sortedWords = wordCounts.toSeq.sortBy(-_._2)
 
-    val secondMomentExact = sortedWords.map(i => math.pow(i._2, 2)).sum
-    val thirdMomentExact = sortedWords.map(i => math.pow(i._2, 3)).sum
+    val secondMomentExact = wordCounts.map(i => math.pow(i._2, 2)).sum
+    val thirdMomentExact = wordCounts.map(i => math.pow(i._2, 3)).sum
 
     println(s"Second moment estimate: $secondMomentEstimate, exact: $secondMomentExact")
     println(s"Third moment estimate: $thirdMomentEstimate, exact: $thirdMomentExact")
 
-    // Second moment estimate: 67421.4, exact: 7648301.0
-    // Third moment estimate: 2.58112971652E10, exact: 6.914019603E9
-
+    // Second moment estimate: 8412950, exact: 7648301.0
+    // Third moment estimate: 7602413910, exact: 6.914019603E9
   }
 
   private def runMeanInequalities(streamLength: Int): Unit = {
@@ -201,11 +197,13 @@ object Usage {
     }
 
     /*
-    Median: -2792759.0
-    Arithmetic mean (M1): 1593.8065072951247
-    Quadratic mean (M2): 38.558390409218035
-    Cubic mean (M3): -11.61287016010758
-    The generalized mean inequalities are not fulfilled.
+    Median: 1.073513687E9
+    Arithmetic mean (M1): 1000.9332771937587
+    Quadratic mean (M2): 1.2397488483111079E9
+    Cubic mean (M3): 1.352790132674414E9
+    The generalized mean inequalities are fulfilled: M1 <= M2 <= M3
+    This assumption is fulfilled only for positive numbers (eg. a_1 from 1 to IntMax)
+    but doesn't work from numbers that contains negative values
     */
   }
 
@@ -214,10 +212,10 @@ object Usage {
     val words = txtFileToSeq(filePath)
     val stream = Seq("a", "a", "a", "c", "c", "b", "b", "c", "c", "c", "b", "c", "c", "d", "c", "d", "c")
     val stream_2 = Seq("a", "b", "a", "b", "c")
-    runMajorityAlgorithm(stream)
-    runMisraGries(words, 21)
-    runCountMinSketch(words)
-    runAlonMatiasSzegedySimplified(words, 60)
+    //runMajorityAlgorithm(stream)
+    //runMisraGries(words, 21)
+    //runCountMinSketch(words)
+    //runAlonMatiasSzegedySimplified(words, 60)
     runMeanInequalities(pow(2, 20).toInt + 1)
   }
 }
