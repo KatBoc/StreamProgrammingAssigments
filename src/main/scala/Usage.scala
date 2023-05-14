@@ -1,4 +1,5 @@
 import scala.io.Source
+import scala.math.pow
 
 object Usage {
   private def txtFileToSeq(filePath: String): Seq[String] = {
@@ -6,7 +7,7 @@ object Usage {
     val words = fileSource.getLines
       .flatMap(_.split("\\W+"))
       .map(_.toLowerCase)
-      .filter(_.nonEmpty) // Add this line to filter out empty strings
+      .filter(_.nonEmpty) // Filter out empty strings
       .toSeq
     fileSource.close()
     words
@@ -26,15 +27,15 @@ object Usage {
       printf("%-20s %-20s %-20s\n", "Word: " + w, "Estimated: " + estimated, "Exact: " + exact)
     }
 
-     /*
-      For Alice in Wonderland:
+    /*
+     For Alice in Wonderland:
 
-      Word: alice          Estimated: 398       Exact: 398
-      Word: s              Estimated: 201       Exact: 201
-      Word: adventures     Estimated: 7         Exact: 7
-      Word: in             Estimated: 369       Exact: 369
-      Word: wonderland     Estimated: 3         Exact: 3
-      */
+     Word: alice          Estimated: 398       Exact: 398
+     Word: s              Estimated: 201       Exact: 201
+     Word: adventures     Estimated: 7         Exact: 7
+     Word: in             Estimated: 369       Exact: 369
+     Word: wonderland     Estimated: 3         Exact: 3
+     */
 
     /*
         For Bible:
@@ -54,6 +55,59 @@ object Usage {
     // The Bible - wrongly estimated frequencies: 13
 
   }
+
+  private def runMajorityAlgorithm(stream: Seq[String]): Unit = {
+    val ma = new MajorityAlgorithm(stream)
+    if (ma.IsMajorityElement) {
+      println(s"\nFounded element ${ma.potentialMajorityElement} is the majority element")
+    } else {
+      println(s"\nFounded element ${ma.potentialMajorityElement} is not the majority element")
+    }
+  }
+
+  /*
+  Searching Majority Element:
+  Current element: a, counter: 1, Candidate: a
+  Current element: a, counter: 2, Candidate: a
+  Current element: a, counter: 3, Candidate: a
+  Current element: c, counter: 2, Candidate: a
+  Current element: c, counter: 1, Candidate: a
+  Current element: b, counter: 0, Candidate: a
+  Current element: b, counter: 1, Candidate: b
+  Current element: c, counter: 0, Candidate: b
+  Current element: c, counter: 1, Candidate: c
+  Current element: c, counter: 2, Candidate: c
+  Current element: b, counter: 1, Candidate: c
+  Current element: c, counter: 2, Candidate: c
+  Current element: c, counter: 3, Candidate: c
+  Current element: d, counter: 2, Candidate: c
+  Current element: c, counter: 3, Candidate: c
+  Current element: d, counter: 2, Candidate: c
+  Current element: c, counter: 3, Candidate: c
+
+  Potential majority element: c
+  Current element: a, counter: -1
+  Current element: a, counter: -2
+  Current element: a, counter: -3
+  Current element: c, counter: -2
+  Current element: c, counter: -1
+  Current element: b, counter: -2
+  Current element: b, counter: -3
+  Current element: c, counter: -2
+  Current element: c, counter: -1
+  Current element: c, counter: 0
+  Current element: b, counter: -1
+  Current element: c, counter: 0
+  Current element: c, counter: 1
+  Current element: d, counter: 0
+  Current element: c, counter: 1
+  Current element: d, counter: 0
+  Current element: c, counter: 1
+
+  Founded element is the majority element
+  // n' > 0 means that there were more additions than subtractions, i.e. the found element occurred more than m/2
+   */
+
 
   private def runMisraGries(words: Seq[String], k: Int): Unit = {
 
@@ -103,33 +157,67 @@ object Usage {
         */
   }
 
-  private def runAlonMatiasSzegedySimplified(words: Seq[String], r: Int = 60): Unit = {
+  private def runAlonMatiasSzegedySimplified(words: Seq[String], r: Int): Unit = {
 
-      val ams = new AlonMatiasSzegedySimplified(words.length, r)
-      words.foreach(ams.add)
+    val ams = new AlonMatiasSzegedySimplified(words.length, r)
+    words.foreach(ams.add)
 
-      val secondMomentEstimate = ams.estimateSecondMoment
-      val thirdMomentEstimate = ams.estimateThirdMoment
+    val secondMomentEstimate = ams.estimateSecondMoment
+    val thirdMomentEstimate = ams.estimateThirdMoment
 
-      val wordCounts = words.groupBy(identity).mapValues(_.length)
-      val sortedWords = wordCounts.toSeq.sortBy(-_._2)
+    val wordCounts = words.groupBy(identity).mapValues(_.length)
+    val sortedWords = wordCounts.toSeq.sortBy(-_._2)
 
-      val secondMomentExact = sortedWords.map(i => math.pow(i._2, 2)).sum
-      val thirdMomentExact = sortedWords.map(i => math.pow(i._2, 3)).sum
+    val secondMomentExact = sortedWords.map(i => math.pow(i._2, 2)).sum
+    val thirdMomentExact = sortedWords.map(i => math.pow(i._2, 3)).sum
 
-      println(s"Second moment estimate: $secondMomentEstimate, exact: $secondMomentExact")
-      println(s"Third moment estimate: $thirdMomentEstimate, exact: $thirdMomentExact")
+    println(s"Second moment estimate: $secondMomentEstimate, exact: $secondMomentExact")
+    println(s"Third moment estimate: $thirdMomentEstimate, exact: $thirdMomentExact")
 
     // Second moment estimate: 67421.4, exact: 7648301.0
     // Third moment estimate: 2.58112971652E10, exact: 6.914019603E9
 
+  }
+
+  private def runMeanInequalities(streamLength: Int): Unit = {
+    val mn = new MeanInequalities(streamLength)
+
+    val median = mn.median
+    println(s"Median: $median")
+
+    val m1 = mn.m1
+    println(s"Arithmetic mean (M1): $m1")
+
+    val m2 = mn.m2
+    println(s"Quadratic mean (M2): $m2")
+
+    val m3 = mn.m3
+    println(s"Cubic mean (M3): $m3")
+
+    if (m1 <= m2 && m2 <= m3) {
+      println("The generalized mean inequalities are fulfilled: M1 <= M2 <= M3")
+    } else {
+      println("The generalized mean inequalities are not fulfilled.")
     }
+
+    /*
+    Median: -2792759.0
+    Arithmetic mean (M1): 1593.8065072951247
+    Quadratic mean (M2): 38.558390409218035
+    Cubic mean (M3): -11.61287016010758
+    The generalized mean inequalities are not fulfilled.
+    */
+  }
 
   def main(args: Array[String]): Unit = {
     val filePath = "C:/Users/KatarzynaBocian(2399/Desktop/BDA/Stream programming/A/Stream_programming_assigments/src/canterbury-corpus-master/canterbury/alice29.txt"
     val words = txtFileToSeq(filePath)
-    // runMisraGries(words, 21)
-    // runCountMinSketch(words)
+    val stream = Seq("a", "a", "a", "c", "c", "b", "b", "c", "c", "c", "b", "c", "c", "d", "c", "d", "c")
+    val stream_2 = Seq("a", "b", "a", "b", "c")
+    runMajorityAlgorithm(stream)
+    runMisraGries(words, 21)
+    runCountMinSketch(words)
     runAlonMatiasSzegedySimplified(words, 60)
+    runMeanInequalities(pow(2, 20).toInt + 1)
   }
 }
