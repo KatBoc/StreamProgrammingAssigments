@@ -1,5 +1,6 @@
 import scala.io.Source
 import scala.math.pow
+import scala.util.Random
 
 object Usage {
   private def txtFileToSeq(filePath: String): Seq[String] = {
@@ -76,8 +77,9 @@ object Usage {
   }
 
   private def runMeanInequalities(streamLength: Int): Unit = {
-    val mn = new MeanInequalities(streamLength)
+    val randomNumbers: Seq[Double] = Seq.fill(streamLength)(Random.nextInt(Int.MaxValue).toDouble).sorted
 
+    val mn = new MeanInequalities(randomNumbers)
     val median = mn.median
     println(s"Median: $median")
 

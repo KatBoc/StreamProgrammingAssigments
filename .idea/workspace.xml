@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610b85c1-00fa-4748-ad5a-e3ec22084f86" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass13_1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass_11_2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass_11_3.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass_11_4.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass_11_5.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Ass_12_1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/BinPolynomial.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/isPrimitive.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/Ass_11.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/Ass_12.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/Ass_13.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/somestuff.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/untitled.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Ass_1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Ass_11_1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/BienaymeChebyshevInequality.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/MeanInequalities.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/MeanInequalities.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Usage.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Usage.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,60 +64,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/KatarzynaBocian(2399/Desktop/Work/Recrutation tasks/Kahoot_Task/Autocompletion",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KatarzynaBocian(2399/Desktop/Work/Recrutation tasks/Kahoot_Task/Autocompletion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Usage">
-    <configuration name="MajorityAlgorithm" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="MajorityAlgorithm" />
+}</component>
+  <component name="RunManager" selected="Application.Ass13_1">
+    <configuration name="Ass13_1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Ass13_1" />
       <module name="Stream_programming_assigments" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MisraGries" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="MisraGries" />
+    <configuration name="Ass_11_1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Ass_11_1" />
       <module name="Stream_programming_assigments" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Usage" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Usage" />
+    <configuration name="Ass_12_1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Ass_12_1" />
       <module name="Stream_programming_assigments" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UseCountMinSketch" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="UseCountMinSketch" />
+    <configuration name="BinPolynomial" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="BinPolynomial" />
       <module name="Stream_programming_assigments" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UseCountMinSketch" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="UseCountMinSketch" />
+    <configuration name="isPrimitive" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="isPrimitive" />
       <module name="Stream_programming_assigments" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;src/canterbury-corpus-master/large/bible.txt&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Usage" />
-        <item itemvalue="Application.MajorityAlgorithm" />
-        <item itemvalue="Application.UseCountMinSketch" />
-        <item itemvalue="Application.MisraGries" />
-        <item itemvalue="Application.UseCountMinSketch" />
+        <item itemvalue="Application.Ass13_1" />
+        <item itemvalue="Application.isPrimitive" />
+        <item itemvalue="Application.Ass_11_1" />
+        <item itemvalue="Application.BinPolynomial" />
+        <item itemvalue="Application.Ass_12_1" />
       </list>
     </recent_temporary>
   </component>

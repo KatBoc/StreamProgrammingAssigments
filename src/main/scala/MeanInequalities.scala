@@ -1,7 +1,6 @@
 import scala.util.Random
-class MeanInequalities(streamLength: Int) {
-  private val randomNumbers: Seq[Int] = Seq.fill(streamLength)(Random.nextInt(Int.MaxValue)).sorted
-
+class MeanInequalities(randomNumbers: Seq[Double]) {
+  private val streamLength = randomNumbers.length
   val median: Double = if (streamLength % 2 ==0) {
     (randomNumbers(streamLength / 2 - 1) + randomNumbers(streamLength / 2 )) / 2.0
   } else {
